@@ -33,12 +33,18 @@
 
 - (void)configureTabBar {
     self.delegate = self;
-    self.tabBar.tintColor = [UIColor blueColor];
-    self.tabBar.backgroundColor = [UIColor whiteColor];
+    self.tabBar.tintColor = RGBColor(64, 136, 231);
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UIFontDescriptorTextStyleAttribute:[UIFont systemFontOfSize:13]} forState:UIControlStateNormal];
+    
+    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [UITabBar appearance].translucent = NO;
+    
+//    self.tabBar.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)configureViewControllers {
-    NSMutableArray *viewControllers = [self.navigationController.viewControllers mutableCopy];
+//    NSMutableArray *viewControllers = [self.navigationController.viewControllers mutableCopy];
+    NSMutableArray<UINavigationController *> *viewControllers = @[].mutableCopy;
     
     NSArray *items = @[
                        @{
@@ -77,8 +83,9 @@
     UIStoryboard *board = [UIStoryboard storyboardWithName:boardName bundle:nil];
     ZYNavigationViewController *nav = (ZYNavigationViewController *)[board instantiateInitialViewController];
     nav.title = title;
-    nav.tabBarItem.image = [UIImage imageNamed:[NSString stringWithFormat:@"tab_%@",imageName]];
-    nav.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"tab_%@",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+    nav.tabBarItem.image = [[UIImage imageNamed:[NSString stringWithFormat:@"tab_%@", imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    nav.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"tab_select_%@",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     return nav;
 }

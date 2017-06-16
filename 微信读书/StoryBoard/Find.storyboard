@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-742" y="-241"/>
         </scene>
-        <!--Find View Controller-->
+        <!--发现-->
         <scene sceneID="hPA-Zr-O1m">
             <objects>
                 <viewController storyboardIdentifier="ZYFindViewController" id="ODy-VS-lo5" customClass="ZYFindViewController" sceneMemberID="viewController">
@@ -36,13 +36,28 @@
                     <view key="view" contentMode="scaleToFill" id="Xyj-HL-UUS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dv2-AG-ZKN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dv2-AG-ZKN" firstAttribute="leading" secondItem="Xyj-HL-UUS" secondAttribute="leading" id="O5N-CO-aGZ"/>
+                            <constraint firstItem="kOa-eI-Zmb" firstAttribute="top" secondItem="Dv2-AG-ZKN" secondAttribute="bottom" id="RDl-Go-e9C"/>
+                            <constraint firstAttribute="trailing" secondItem="Dv2-AG-ZKN" secondAttribute="trailing" id="Xbb-lj-eMY"/>
+                            <constraint firstItem="Dv2-AG-ZKN" firstAttribute="top" secondItem="Xyj-HL-UUS" secondAttribute="top" id="gR6-nn-O5o"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="K33-Nh-WX0"/>
+                    <navigationItem key="navigationItem" title="发现" id="K33-Nh-WX0"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Dv2-AG-ZKN" id="0tx-9f-2Si"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqF-pH-YGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="-254"/>
+            <point key="canvasLocation" x="-26.399999999999999" y="-254.12293853073464"/>
         </scene>
     </scenes>
 </document>

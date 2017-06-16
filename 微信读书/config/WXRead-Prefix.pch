@@ -1,0 +1,17 @@
+//
+//  WXRead-Prefix.pch
+//  微信读书
+//
+//  Created by kede on 2017/6/16.
+//  Copyright © 2017年 kede. All rights reserved.
+//
+
+#ifndef WXRead_Prefix_pch
+#define WXRead_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "BSConfig.h"
+
+#endif /* WXRead_Prefix_pch */
