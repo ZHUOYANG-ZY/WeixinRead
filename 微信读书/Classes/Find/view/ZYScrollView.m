@@ -7,6 +7,7 @@
 //
 
 #import "ZYScrollView.h"
+#import "ZYPageView.h"
 
 @interface ZYScrollView ()
 @property (strong, nonatomic) UIImageView *imageView;
@@ -19,35 +20,47 @@
     if ([super initWithFrame:frame]) {
         
         self.backgroundColor = [UIColor clearColor];
-        [self addScrollView];
-        [self addImageView];
+//        [self addScrollView];
+//        [self addImageView];
         
 //        self.clipsToBounds = YES;
     }
     return self;
 }
 
-- (void)addScrollView {
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(35, 74, SCREENWIDTH-35*2, SCREENHEIGHT-64-49-20)];
-    _scrollView.backgroundColor = [UIColor whiteColor];
+- (void)addScrollView:(NSInteger)pageCount {
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(27.5, 74, SCREENWIDTH-35*2 + 15, SCREENHEIGHT-64-49-20)];
+    _scrollView.backgroundColor = [UIColor clearColor];
     _scrollView.clipsToBounds = NO;
     _scrollView.pagingEnabled = YES;
-    _scrollView.contentSize = CGSizeMake((SCREENWIDTH - 35*2)*3 , SCREENHEIGHT-64-49-20);
+    _scrollView.contentSize = CGSizeMake((SCREENWIDTH - 35*2 +15)*pageCount , SCREENHEIGHT-64-49-20);
     NSLog(@"%f",_scrollView.contentSize.width);
+    _scrollView.showsHorizontalScrollIndicator = NO;
     [self addSubview:_scrollView];
 }
 
-- (void)addImageView {
-    for (int i=0; i<3; i++) {
-        if (i==0) {
-             _imageView = [[UIImageView alloc] initWithFrame:CGRectMake( 0, 0, SCREENWIDTH-35*2, SCREENHEIGHT-64-49-20)];
-        } else {
-        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake( (SCREENWIDTH-35*2 +15)*i , 0, SCREENWIDTH-35*2, SCREENHEIGHT-64-49-20)];
-        }
-        _imageView.image = [UIImage imageNamed:@"image"];
-        NSLog(@"%f",_imageView.frame.origin.x);
-        [self.scrollView addSubview:_imageView];
+- (void)addImageView:(NSInteger)pageCount {
+    for (int i=0; i<pageCount; i++) {
+
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake((SCREENWIDTH-35*2 +15)*i, 0, SCREENWIDTH - 35*2 + 15, SCREENHEIGHT - 64 - 49 - 20)];
+        view.backgroundColor = [UIColor clearColor];
+        
+        _pageView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ZYPageView class]) owner:self options:nil][0];
+        _pageView.tapView.tag = pageCount;
+        _pageView.frame = CGRectMake( 7.5, 0, SCREENWIDTH-35*2, SCREENHEIGHT-64-49-20);
+        
+        
+
+        _pageView.backgroundColor = [UIColor whiteColor];
+        _pageView.layer.cornerRadius = 5;
+        _pageView.layer.masksToBounds = YES;
+
+        
+        [view addSubview:self.pageView];
+        [self.scrollView addSubview:view];
     }
+    
+    NSLog(@"tag -- %ld",_pageView.tapView.tag);
 }
 
 #pragma mark - hitTest

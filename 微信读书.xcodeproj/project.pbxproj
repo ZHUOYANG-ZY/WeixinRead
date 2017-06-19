@@ -27,6 +27,9 @@
 		845132641EF271F9001E8075 /* ZYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845132631EF271F9001E8075 /* ZYTabBarViewController.m */; };
 		845132671EF27258001E8075 /* ZYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845132661EF27258001E8075 /* ZYNavigationViewController.m */; };
 		84725ECA1EF3CD800084BB15 /* ZYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84725EC91EF3CD800084BB15 /* ZYScrollView.m */; };
+		849FFE151EF76BDD00379251 /* ZYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849FFE141EF76BDD00379251 /* ZYPageView.m */; };
+		849FFE171EF76BE800379251 /* ZYPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849FFE161EF76BE800379251 /* ZYPageView.xib */; };
+		849FFE1A1EF7724800379251 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849FFE191EF7724800379251 /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,10 @@
 		84725EC61EF36F420084BB15 /* WXRead-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WXRead-Prefix.pch"; sourceTree = "<group>"; };
 		84725EC81EF3CD800084BB15 /* ZYScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYScrollView.h; sourceTree = "<group>"; };
 		84725EC91EF3CD800084BB15 /* ZYScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYScrollView.m; sourceTree = "<group>"; };
+		849FFE131EF76BDD00379251 /* ZYPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPageView.h; sourceTree = "<group>"; };
+		849FFE141EF76BDD00379251 /* ZYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPageView.m; sourceTree = "<group>"; };
+		849FFE161EF76BE800379251 /* ZYPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYPageView.xib; sourceTree = "<group>"; };
+		849FFE191EF7724800379251 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849FFE1A1EF7724800379251 /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +175,7 @@
 				8451323A1EF26B70001E8075 /* 微信读书Tests */,
 				845132451EF26B70001E8075 /* 微信读书UITests */,
 				8451321F1EF26B70001E8075 /* Products */,
+				849FFE181EF7724800379251 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,8 +273,19 @@
 			children = (
 				84725EC81EF3CD800084BB15 /* ZYScrollView.h */,
 				84725EC91EF3CD800084BB15 /* ZYScrollView.m */,
+				849FFE131EF76BDD00379251 /* ZYPageView.h */,
+				849FFE141EF76BDD00379251 /* ZYPageView.m */,
+				849FFE161EF76BE800379251 /* ZYPageView.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		849FFE181EF7724800379251 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				849FFE191EF7724800379251 /* GLKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +398,7 @@
 			files = (
 				845132311EF26B70001E8075 /* LaunchScreen.storyboard in Resources */,
 				8451322E1EF26B70001E8075 /* Assets.xcassets in Resources */,
+				849FFE171EF76BE800379251 /* ZYPageView.xib in Resources */,
 				8451322C1EF26B70001E8075 /* Main.storyboard in Resources */,
 				8451325A1EF2702F001E8075 /* Bookrack.storyboard in Resources */,
 				845132581EF27013001E8075 /* Find.storyboard in Resources */,
@@ -417,6 +438,7 @@
 				845132261EF26B70001E8075 /* AppDelegate.m in Sources */,
 				842FF47C1EF287440071066A /* ZYIdeaViewController.m in Sources */,
 				845132231EF26B70001E8075 /* main.m in Sources */,
+				849FFE151EF76BDD00379251 /* ZYPageView.m in Sources */,
 				842FF4791EF2873B0071066A /* ZYMyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

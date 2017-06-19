@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZYPageView.h"
 
 @interface ZYScrollView : UIView
 @property (strong, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) ZYPageView *pageView;
+
+- (void)addScrollView:(NSInteger)pageCount;
+- (void)addImageView:(NSInteger)pageCount;
 @end

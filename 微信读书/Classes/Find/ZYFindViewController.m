@@ -8,9 +8,10 @@
 
 #import "ZYFindViewController.h"
 #import "ZYScrollView.h"
+#import "ZYPageView.h"
 
 
-@interface ZYFindViewController ()<UIScrollViewDelegate>
+@interface ZYFindViewController ()<UIScrollViewDelegate,ZYPageViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
@@ -27,7 +28,6 @@
      1.旋转 tableview
      2.使用 scrollview
      */
-//    [self useScrollView];
     [self addScrollView];
     
     
@@ -35,38 +35,10 @@
 
 - (void)addScrollView {
     ZYScrollView *view = [[ZYScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-49)];
-//    view.scrollView.contentSize = CGSizeMake(35+20+ 15*2 + (SCREENWIDTH - 35*2)*2, SCREENHEIGHT-64-49-20);
+    view.pageView.delegate = self;
+    [view addScrollView:10];
+    [view addImageView:10];
     [self.view addSubview:view];
-}
-
-- (void)useScrollView {
-    self.scrollView.delegate = self;
-//    self.scrollView.backgroundColor = [UIColor orangeColor];
-    self.scrollView.contentSize = CGSizeMake(35+20+ 15*2 + (SCREENWIDTH - 35*2)*2, SCREENHEIGHT-64-49);
-//    self.scrollView.contentSize = CGSizeMake(SCREENWIDTH * 3, SCREENHEIGHT-64-49);
-    self.scrollView.pagingEnabled = YES;
-    NSLog(@"%f",self.scrollView.contentSize.width);
-    
-    for (int i=0; i<3; i++) {
-        UIImageView *item = [[UIImageView alloc] init];
-        item.backgroundColor = [UIColor whiteColor];
-        item.frame = CGRectMake(10+SCREENWIDTH * i, 10, SCREENWIDTH-20, SCREENHEIGHT-64-49-20);
-//        [self.scrollView addSubview:item];
-    }
-    //添加scrollview 图片
-    for (int i=0; i < 2; i++) {
-        UIImageView *item = [[UIImageView alloc] init];
-        item.backgroundColor = [UIColor whiteColor];
-//        if (i == 0) {
-//            item.frame = CGRectMake(20+15, 10, SCREENWIDTH-35*2, SCREENHEIGHT-64-49-20);
-//        } else
-//        if(i==1) {
-            item.frame = CGRectMake(20+15+(SCREENWIDTH-35*2)*i + 15*i, 10, SCREENWIDTH-35*2, SCREENHEIGHT-64-49-20);
-//        }
-        NSLog(@"%f",item.frame.origin.x);
-        [self.scrollView addSubview:item];
-        
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -80,6 +52,10 @@
     [self.navigationController.navigationBar setShadowImage:nil];
 }
 
+#pragma mark - delegate method
 
+- (void)clickPagePushToDetailView:(NSInteger)sender {
+    NSLog(@" sender -- %ld",sender);
+}
 
 @end
