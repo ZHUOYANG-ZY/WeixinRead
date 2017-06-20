@@ -7,11 +7,12 @@
 //
 
 #import "ZYFindViewController.h"
+#import "ZYPageDetailViewController.h"
 #import "ZYScrollView.h"
 #import "ZYPageView.h"
 
 
-@interface ZYFindViewController ()<UIScrollViewDelegate,ZYPageViewDelegate>
+@interface ZYFindViewController ()<UIScrollViewDelegate,ZYScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
@@ -34,11 +35,11 @@
 }
 
 - (void)addScrollView {
-    ZYScrollView *view = [[ZYScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-49)];
-    view.pageView.delegate = self;
-    [view addScrollView:10];
-    [view addImageView:10];
-    [self.view addSubview:view];
+    ZYScrollView *sview = [[ZYScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-49)];
+    sview.delegate = self;
+    [sview addScrollView:10];
+    [sview addImageView:10];
+    [self.view addSubview:sview];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -56,6 +57,9 @@
 
 - (void)clickPagePushToDetailView:(NSInteger)sender {
     NSLog(@" sender -- %ld",sender);
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Find" bundle:nil];
+    ZYPageDetailViewController *pagedetailVC = [story instantiateViewControllerWithIdentifier:@"ZYPageDetailViewController"];
+    [self.navigationController pushViewController:pagedetailVC animated:YES];
 }
 
 @end

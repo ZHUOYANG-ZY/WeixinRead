@@ -9,10 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "ZYPageView.h"
 
+@protocol ZYScrollViewDelegate <NSObject>
+
+- (void)clickPagePushToDetailView:(NSInteger)sender;
+
+@end
+
 @interface ZYScrollView : UIView
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong, nonatomic) ZYPageView *pageView;
 
+@property (weak, nonatomic)id<ZYScrollViewDelegate> delegate;
+
 - (void)addScrollView:(NSInteger)pageCount;
 - (void)addImageView:(NSInteger)pageCount;
+
+
 @end

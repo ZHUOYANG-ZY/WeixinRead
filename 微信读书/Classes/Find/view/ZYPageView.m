@@ -25,7 +25,7 @@
     self.readUserImage.layer.masksToBounds = YES;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickPage:)];
-    [self.tapView addGestureRecognizer:tap];
+//    [self.tapView addGestureRecognizer:tap];
 }
 
 - (void)clickPage:(UITapGestureRecognizer *)ges {

@@ -9,7 +9,7 @@
 #import "ZYScrollView.h"
 #import "ZYPageView.h"
 
-@interface ZYScrollView ()
+@interface ZYScrollView ()<ZYPageViewDelegate>
 @property (strong, nonatomic) UIImageView *imageView;
 
 @end
@@ -40,17 +40,19 @@
 }
 
 - (void)addImageView:(NSInteger)pageCount {
+   
     for (int i=0; i<pageCount; i++) {
 
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake((SCREENWIDTH-35*2 +15)*i, 0, SCREENWIDTH - 35*2 + 15, SCREENHEIGHT - 64 - 49 - 20)];
         view.backgroundColor = [UIColor clearColor];
         
         _pageView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ZYPageView class]) owner:self options:nil][0];
-        _pageView.tapView.tag = pageCount;
+        _pageView.tapView.tag = i;
         _pageView.frame = CGRectMake( 7.5, 0, SCREENWIDTH-35*2, SCREENHEIGHT-64-49-20);
+ 
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickPage:)];
+        [self.pageView.tapView addGestureRecognizer:tap];
         
-        
-
         _pageView.backgroundColor = [UIColor whiteColor];
         _pageView.layer.cornerRadius = 5;
         _pageView.layer.masksToBounds = YES;
@@ -58,9 +60,17 @@
         
         [view addSubview:self.pageView];
         [self.scrollView addSubview:view];
+        
+         NSLog(@"tag -- %ld",_pageView.tapView.tag);
     }
     
-    NSLog(@"tag -- %ld",_pageView.tapView.tag);
+   
+}
+
+- (void)clickPage:(UITapGestureRecognizer *)ges {
+    if ([self.delegate respondsToSelector:@selector(clickPagePushToDetailView:)]) {
+        [self.delegate clickPagePushToDetailView:ges.view.tag];
+    }
 }
 
 #pragma mark - hitTest

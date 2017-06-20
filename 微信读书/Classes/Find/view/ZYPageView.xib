@@ -58,7 +58,7 @@
                         <constraint firstAttribute="width" secondItem="lWQ-Zs-y0n" secondAttribute="height" multiplier="7:9" constant="-13.444444444444443" id="EnO-g5-pce"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UT8-Hr-yUJ">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UT8-Hr-yUJ">
                     <rect key="frame" x="0.0" y="0.0" width="305" height="534"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="10C-Nc-qKT">

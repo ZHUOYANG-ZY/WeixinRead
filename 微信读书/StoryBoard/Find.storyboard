@@ -59,5 +59,23 @@
             </objects>
             <point key="canvasLocation" x="-26.399999999999999" y="-254.12293853073464"/>
         </scene>
+        <!--Page Detail View Controller-->
+        <scene sceneID="Coi-Fu-5ny">
+            <objects>
+                <viewController storyboardIdentifier="ZYPageDetailViewController" id="HCM-mv-JKG" customClass="ZYPageDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AgG-DD-rha"/>
+                        <viewControllerLayoutGuide type="bottom" id="gvl-NJ-pIM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eYE-pV-jMw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEd-d8-5ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="-255"/>
+        </scene>
     </scenes>
 </document>
