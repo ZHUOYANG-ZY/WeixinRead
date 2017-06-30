@@ -12,6 +12,10 @@
 		842FF4791EF2873B0071066A /* ZYMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842FF4781EF2873B0071066A /* ZYMyViewController.m */; };
 		842FF47C1EF287440071066A /* ZYIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842FF47B1EF287440071066A /* ZYIdeaViewController.m */; };
 		842FF47F1EF287500071066A /* ZYBookrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842FF47E1EF287500071066A /* ZYBookrackViewController.m */; };
+		84395B211F0622200060E755 /* headerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84395B1F1F0622200060E755 /* headerView.m */; };
+		84395B221F0622200060E755 /* headerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84395B201F0622200060E755 /* headerView.xib */; };
+		84395B261F06233E0060E755 /* ZYBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84395B241F06233E0060E755 /* ZYBookCell.m */; };
+		84395B271F06233E0060E755 /* ZYBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84395B251F06233E0060E755 /* ZYBookCell.xib */; };
 		845132231EF26B70001E8075 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845132221EF26B70001E8075 /* main.m */; };
 		845132261EF26B70001E8075 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845132251EF26B70001E8075 /* AppDelegate.m */; };
 		845132291EF26B70001E8075 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845132281EF26B70001E8075 /* ViewController.m */; };
@@ -28,6 +32,8 @@
 		845132671EF27258001E8075 /* ZYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845132661EF27258001E8075 /* ZYNavigationViewController.m */; };
 		84725ECA1EF3CD800084BB15 /* ZYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84725EC91EF3CD800084BB15 /* ZYScrollView.m */; };
 		8481D78F1EF9138100D10DE4 /* ZYPageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8481D78E1EF9138100D10DE4 /* ZYPageDetailViewController.m */; };
+		8481D7931EF92E4F00D10DE4 /* ZYPageDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8481D7911EF92E4F00D10DE4 /* ZYPageDetailCell.m */; };
+		8481D7941EF92E4F00D10DE4 /* ZYPageDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8481D7921EF92E4F00D10DE4 /* ZYPageDetailCell.xib */; };
 		849FFE151EF76BDD00379251 /* ZYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849FFE141EF76BDD00379251 /* ZYPageView.m */; };
 		849FFE171EF76BE800379251 /* ZYPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849FFE161EF76BE800379251 /* ZYPageView.xib */; };
 		849FFE1A1EF7724800379251 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849FFE191EF7724800379251 /* GLKit.framework */; };
@@ -61,6 +67,12 @@
 		842FF47B1EF287440071066A /* ZYIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYIdeaViewController.m; sourceTree = "<group>"; };
 		842FF47D1EF287500071066A /* ZYBookrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBookrackViewController.h; sourceTree = "<group>"; };
 		842FF47E1EF287500071066A /* ZYBookrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBookrackViewController.m; sourceTree = "<group>"; };
+		84395B1E1F0622200060E755 /* headerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = headerView.h; sourceTree = "<group>"; };
+		84395B1F1F0622200060E755 /* headerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = headerView.m; sourceTree = "<group>"; };
+		84395B201F0622200060E755 /* headerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = headerView.xib; sourceTree = "<group>"; };
+		84395B231F06233E0060E755 /* ZYBookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBookCell.h; sourceTree = "<group>"; };
+		84395B241F06233E0060E755 /* ZYBookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBookCell.m; sourceTree = "<group>"; };
+		84395B251F06233E0060E755 /* ZYBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYBookCell.xib; sourceTree = "<group>"; };
 		8451321E1EF26B70001E8075 /* 微信读书.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微信读书.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845132221EF26B70001E8075 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845132241EF26B70001E8075 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +103,9 @@
 		84725EC91EF3CD800084BB15 /* ZYScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYScrollView.m; sourceTree = "<group>"; };
 		8481D78D1EF9138100D10DE4 /* ZYPageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPageDetailViewController.h; sourceTree = "<group>"; };
 		8481D78E1EF9138100D10DE4 /* ZYPageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPageDetailViewController.m; sourceTree = "<group>"; };
+		8481D7901EF92E4F00D10DE4 /* ZYPageDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPageDetailCell.h; sourceTree = "<group>"; };
+		8481D7911EF92E4F00D10DE4 /* ZYPageDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPageDetailCell.m; sourceTree = "<group>"; };
+		8481D7921EF92E4F00D10DE4 /* ZYPageDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYPageDetailCell.xib; sourceTree = "<group>"; };
 		849FFE131EF76BDD00379251 /* ZYPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPageView.h; sourceTree = "<group>"; };
 		849FFE141EF76BDD00379251 /* ZYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPageView.m; sourceTree = "<group>"; };
 		849FFE161EF76BE800379251 /* ZYPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYPageView.xib; sourceTree = "<group>"; };
@@ -146,6 +161,7 @@
 		842FF4741EF286FB0071066A /* Bookrack */ = {
 			isa = PBXGroup;
 			children = (
+				84395B1D1F0621E30060E755 /* view */,
 				842FF47D1EF287500071066A /* ZYBookrackViewController.h */,
 				842FF47E1EF287500071066A /* ZYBookrackViewController.m */,
 			);
@@ -168,6 +184,19 @@
 				842FF4781EF2873B0071066A /* ZYMyViewController.m */,
 			);
 			path = My;
+			sourceTree = "<group>";
+		};
+		84395B1D1F0621E30060E755 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				84395B1E1F0622200060E755 /* headerView.h */,
+				84395B1F1F0622200060E755 /* headerView.m */,
+				84395B201F0622200060E755 /* headerView.xib */,
+				84395B231F06233E0060E755 /* ZYBookCell.h */,
+				84395B241F06233E0060E755 /* ZYBookCell.m */,
+				84395B251F06233E0060E755 /* ZYBookCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		845132151EF26B70001E8075 = {
@@ -278,6 +307,9 @@
 				849FFE131EF76BDD00379251 /* ZYPageView.h */,
 				849FFE141EF76BDD00379251 /* ZYPageView.m */,
 				849FFE161EF76BE800379251 /* ZYPageView.xib */,
+				8481D7901EF92E4F00D10DE4 /* ZYPageDetailCell.h */,
+				8481D7911EF92E4F00D10DE4 /* ZYPageDetailCell.m */,
+				8481D7921EF92E4F00D10DE4 /* ZYPageDetailCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -410,10 +442,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				845132311EF26B70001E8075 /* LaunchScreen.storyboard in Resources */,
+				84395B221F0622200060E755 /* headerView.xib in Resources */,
 				8451322E1EF26B70001E8075 /* Assets.xcassets in Resources */,
 				849FFE171EF76BE800379251 /* ZYPageView.xib in Resources */,
 				8451322C1EF26B70001E8075 /* Main.storyboard in Resources */,
+				84395B271F06233E0060E755 /* ZYBookCell.xib in Resources */,
 				8451325A1EF2702F001E8075 /* Bookrack.storyboard in Resources */,
+				8481D7941EF92E4F00D10DE4 /* ZYPageDetailCell.xib in Resources */,
 				845132581EF27013001E8075 /* Find.storyboard in Resources */,
 				8451325E1EF27063001E8075 /* Idea.storyboard in Resources */,
 				845132601EF27086001E8075 /* My.storyboard in Resources */,
@@ -443,7 +478,10 @@
 			files = (
 				842FF4701EF286E60071066A /* ZYBaseViewController.m in Sources */,
 				84725ECA1EF3CD800084BB15 /* ZYScrollView.m in Sources */,
+				84395B211F0622200060E755 /* headerView.m in Sources */,
+				8481D7931EF92E4F00D10DE4 /* ZYPageDetailCell.m in Sources */,
 				842FF4731EF286F70071066A /* ZYFindViewController.m in Sources */,
+				84395B261F06233E0060E755 /* ZYBookCell.m in Sources */,
 				845132291EF26B70001E8075 /* ViewController.m in Sources */,
 				845132641EF271F9001E8075 /* ZYTabBarViewController.m in Sources */,
 				845132671EF27258001E8075 /* ZYNavigationViewController.m in Sources */,

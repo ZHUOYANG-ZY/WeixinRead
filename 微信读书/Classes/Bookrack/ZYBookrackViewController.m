@@ -7,8 +7,10 @@
 //
 
 #import "ZYBookrackViewController.h"
+#import "ZYBookCell.h"
 
-@interface ZYBookrackViewController ()
+@interface ZYBookrackViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -23,16 +25,33 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ZYBookCell class]) bundle:nil] forCellWithReuseIdentifier:@"ZYBookCell"];
+    
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.backgroundColor = [UIColor orangeColor];
+    
+    self.collectionView.collectionViewLayout = ({
+    
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.itemSize = CGSizeMake((SCREENWIDTH- 20*4)/4.0, (SCREENWIDTH- 20*4)/4.0 * 201/123);
+        layout.minimumLineSpacing = 0;
+        layout.minimumInteritemSpacing = 0;
+        layout;
+    });
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
 }
-*/
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    ZYBookCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZYBookCell" forIndexPath:indexPath];
+    return cell;
+}
 
 @end

@@ -59,6 +59,7 @@
     NSLog(@" sender -- %ld",sender);
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Find" bundle:nil];
     ZYPageDetailViewController *pagedetailVC = [story instantiateViewControllerWithIdentifier:@"ZYPageDetailViewController"];
+    pagedetailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:pagedetailVC animated:YES];
 }
 
