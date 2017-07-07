@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *desLabel;
 @property (weak, nonatomic) IBOutlet UILabel *comment1Label;
 @property (weak, nonatomic) IBOutlet UILabel *comment2Label;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *commentViewHeight;
 
 @end
