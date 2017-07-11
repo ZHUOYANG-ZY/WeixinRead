@@ -17,6 +17,8 @@
 /*评论2 */
 @property (copy, nonatomic) NSString *commentTextString2;
 
-@property (assign, nonatomic) CGFloat cellHeight;
+/*各 view 高度*/
+@property (assign, nonatomic) CGFloat cellHeight; //除评论父试图外的高度
+@property (assign, nonatomic) CGFloat commentViewHeight; //评论父试图高度
 
 @end

@@ -7,15 +7,22 @@
 //
 
 #import "ZYPageDetailCell.h"
+#import "ZYPageDetailCellModel.h"
 
 @implementation ZYPageDetailCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.desLabel.text = @"舒婷说：“我很幸运，生长在这样一个南方岛屿，春夏秋冬，日日夜夜，与绿树鲜花呼吸与共”。鼓浪屿就是这样一个让人着迷的地方。";
-    self.comment1Label.text =@"我很幸运，生长在这样一个南方岛屿，春夏秋冬，日日夜夜，与绿树鲜花呼吸与共”。鼓浪屿就是这样一个让人着迷的地方。";
-    self.comment2Label.text = @"我很幸运，生长在这样一个南方岛屿，春夏秋冬，日日夜夜，与绿树鲜花呼吸与共”。鼓浪屿就是这样一个让人着迷的地方。";
+    [self.desLabel sizeToFit];
+}
+
+- (void)setPageDetailModel:(ZYPageDetailCellModel *)pageDetailModel {
+    _pageDetailModel = pageDetailModel;
+    
+    self.desLabel.text = pageDetailModel.commentTextString;
+    self.comment1Label.text = pageDetailModel.commentTextString1;
+    self.comment2Label.text = pageDetailModel.commentTextString2;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

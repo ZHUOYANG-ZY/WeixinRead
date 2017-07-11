@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZYPageDetailCellModel;
 
 @interface ZYPageDetailCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *desLabel;
@@ -14,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *comment2Label;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *commentViewHeight;
 
+
+@property (strong, nonatomic) ZYPageDetailCellModel *pageDetailModel;
 @end

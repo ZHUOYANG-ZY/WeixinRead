@@ -10,21 +10,29 @@
 
 @implementation ZYPageDetailCellModel
 
+- (CGFloat)commentViewHeight {
+    CGSize maxSize1 = CGSizeMake(SCREENWIDTH-70, MAXFLOAT); //label的size，label的宽度，高度随便，不过尽量大，我这里用了最大
+    
+    /*计算评论内容的高度*/
+    //1.评论文字1
+    CGFloat textH2 = [self.commentTextString1 boundingRectWithSize:maxSize1 options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.f]} context:nil].size.height;
+    //2.评论文字2
+    CGFloat textH3 = [self.commentTextString2 boundingRectWithSize:maxSize1 options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.f]} context:nil].size.height;
+    
+    //1.评论父试图
+    _commentViewHeight = 10+ 13.5+ 15 + textH2 + 10 + textH3 +10+27+2.5; //从view里第一个控件开始到最后一个之间的高度都要加上
+    return _commentViewHeight;
+}
+
 - (CGFloat)cellHeight {
     CGSize maxSize = CGSizeMake(SCREENWIDTH-70, MAXFLOAT);
-    CGSize maxSize1 = CGSizeMake(SCREENWIDTH-86, MAXFLOAT);
+    
     
     /*计算内容的高度*/
     //1.分享文字
     CGFloat textH1 = [self.commentTextString boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.f]} context:nil].size.height;
+        _cellHeight = 47* SCREENWIDTH/320 + textH1 + 56 * SCREENWIDTH/320 + 30;
     
-    CGFloat textH2 = [self.commentTextString1 boundingRectWithSize:maxSize1 options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.f]} context:nil].size.height;
-    
-    CGFloat textH3 = [self.commentTextString2 boundingRectWithSize:maxSize1 options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.f]} context:nil].size.height;
-    
-    _cellHeight = 40+15+textH1+ +47+35+44+ textH2+textH3 + 16 ;
-    
-    NSLog(@"ceh -- %f %f %f",textH1,textH2,textH3);
     return _cellHeight;
 }
 @end
