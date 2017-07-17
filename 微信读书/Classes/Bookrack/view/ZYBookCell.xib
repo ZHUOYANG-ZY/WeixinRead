@@ -25,15 +25,15 @@
                             <constraint firstAttribute="width" secondItem="UJj-u7-0Pa" secondAttribute="height" multiplier="123:155" id="4tf-Bt-GZF"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生长在这样一个南方岛屿" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s0-ab-SJh">
-                        <rect key="frame" x="2" y="160" width="119" height="29"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我只想和你说说话" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s0-ab-SJh">
+                        <rect key="frame" x="2" y="160" width="119" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.57607084509999995" green="0.72145444150000004" blue="0.27055975789999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="UJj-u7-0Pa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4a5-8m-Jho"/>
                 <constraint firstItem="6s0-ab-SJh" firstAttribute="top" secondItem="UJj-u7-0Pa" secondAttribute="bottom" constant="5" id="TmC-Mi-IDa"/>

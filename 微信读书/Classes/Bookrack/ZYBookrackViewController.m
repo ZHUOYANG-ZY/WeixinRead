@@ -20,27 +20,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"书架";
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ZYBookCell class]) bundle:nil] forCellWithReuseIdentifier:@"ZYBookCell"];
     
-    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.collectionView.contentInset = UIEdgeInsetsMake(20, 20, 20, 20);
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = [UIColor orangeColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
     self.collectionView.collectionViewLayout = ({
-    
+        
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.itemSize = CGSizeMake((SCREENWIDTH- 20*4)/4.0, (SCREENWIDTH- 20*4)/4.0 * 201/123);
-        layout.minimumLineSpacing = 0;
+        layout.itemSize = CGSizeMake((SCREENWIDTH- 20*4)/3.0, (SCREENWIDTH- 20*4)/3.0 * 211/123);
+        layout.minimumLineSpacing = 20;
         layout.minimumInteritemSpacing = 0;
         layout;
     });
+
 }
+
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -53,5 +51,6 @@
     ZYBookCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZYBookCell" forIndexPath:indexPath];
     return cell;
 }
+
 
 @end
